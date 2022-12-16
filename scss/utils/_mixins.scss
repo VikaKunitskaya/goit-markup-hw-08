@@ -1,0 +1,19 @@
+@mixin centredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonStyle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: $whiteColor;
+  background-color: $accentColor;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}

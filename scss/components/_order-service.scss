@@ -1,0 +1,183 @@
+.order {
+  padding: 40px;
+}
+
+.order__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.order__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.order__lable .placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.order__label {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.order__wraper {
+  position: relative;
+}
+
+.order__input {
+  padding: 11px 15px 11px 30px;
+  width: 448px;
+
+  transition: border $trDuration $trTimingFunction,
+    outline $trDuration $trTimingFunction;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+    outline: none;
+  }
+}
+
+.order__subtitle {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $secondaryColor;
+}
+
+.order__icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  display: block;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+
+  transition: fill $trDuration $trTimingFunction;
+
+  .order__input:hover + &,
+  .order__input:focus + & {
+    fill: $accentColor;
+  }
+}
+
+.order__textarea {
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border $trDuration $trTimingFunction,
+    outline $trDuration $trTimingFunction;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+    outline: none;
+  }
+}
+
+.agree {
+  @include centredFlex;
+  margin-bottom: 20px;
+}
+
+.agree__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration-line: underline;
+  color: $accentColor;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox__custom {
+  margin-right: 8px;
+  @include centredFlex;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid $primaryColor;
+  border-radius: 4px;
+  transition: border $trDuration $trTimingFunction;
+
+  cursor: pointer;
+
+  .checkbox:checked + & {
+    border: 2px solid $accentColor;
+  }
+
+  .checkbox:focus + & {
+    border: 2px solid $accentColor;
+  }
+}
+
+.checkbox__icon {
+  width: 16px;
+  height: 15px;
+  opacity: 0;
+  transition: opacity $trDuration $trTimingFunction;
+
+  .checkbox:checked + .checkbox__custom & {
+    opacity: 1;
+  }
+}
+
+.agree__text {
+  margin-right: 4px;
+}
+
+.btn-send {
+  margin: 0 auto;
+  padding: 10px 52px;
+  height: 50px;
+  display: block;
+  text-align: center;
+
+  @include buttonStyle;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: color $trDuration $trTimingFunction,
+    background-color $trDuration $trTimingFunction,
+    outline $trDuration $trTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    background-color: $whiteColor;
+    outline: 1px solid $accentColor;
+  }
+}

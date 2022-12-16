@@ -1,0 +1,40 @@
+.team {
+  background-color: $greyColor;
+}
+
+.team__list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.team__item {
+  margin-right: 30px;
+  padding-bottom: 30px;
+
+  background-color: $whiteColor;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team__name {
+  margin: 30px 0 10px 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: $primaryColor;
+  text-align: center;
+}
+
+.team__position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: $secondaryColor;
+  text-align: center;
+}

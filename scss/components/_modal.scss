@@ -1,0 +1,60 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity $trDuration $trTimingFunction,
+    visibility $trDuration $trTimingFunction;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: $whiteColor;
+
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 0;
+  @include centredFlex;
+  width: 30px;
+  height: 30px;
+
+  background-color: $whiteColor;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+}
+
+.btn-close__icon {
+  transition: fill $trDuration $trTimingFunction;
+
+  .btn-close:hover &,
+  .btn-close:focus & {
+    fill: $accentColor;
+  }
+}

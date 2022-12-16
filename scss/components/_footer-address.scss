@@ -1,0 +1,28 @@
+.address {
+  margin-top: 20px;
+}
+
+.address__link {
+  font-style: normal;
+  color: $linkColor;
+  text-decoration: none;
+
+  transition: color $trDuration $trTimingFunction;
+
+  &--white {
+    color: $whiteColor;
+  }
+
+  &:focus,
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.address__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

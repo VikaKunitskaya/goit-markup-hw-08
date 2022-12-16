@@ -1,0 +1,44 @@
+.social {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  @include centredFlex;
+  width: 44px;
+  height: 44px;
+
+  color: $iconColor;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: background-color $trDuration $trTimingFunction;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__icon {
+  fill: $iconColor;
+  transition: fill $trDuration $trTimingFunction;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: $whiteColor;
+  }
+
+  &--white {
+    fill: $whiteColor;
+  }
+}
