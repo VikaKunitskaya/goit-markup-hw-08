@@ -37,9 +37,8 @@
 }
 
 .order__input {
-  padding: 11px 15px 11px 30px;
-  width: 448px;
-
+  width: 100%;
+  padding: 11px 12px;
   transition: border $trDuration $trTimingFunction,
     outline $trDuration $trTimingFunction;
 
@@ -50,6 +49,10 @@
   &:focus {
     border: 1px solid $accentColor;
     outline: none;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 11px 15px 11px 30px;
+    width: 448px;
   }
 }
 
@@ -82,7 +85,7 @@
 
 .order__textarea {
   padding: 12px 16px;
-  width: 448px;
+  width: 100%;
   height: 120px;
   resize: none;
 
@@ -97,6 +100,10 @@
     border: 1px solid $accentColor;
     outline: none;
   }
+
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
 }
 
 .agree {
@@ -106,10 +113,14 @@
 
 .agree__link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   text-decoration-line: underline;
   color: $accentColor;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
 }
 
 .checkbox {
@@ -156,6 +167,7 @@
 }
 
 .agree__text {
+  font-size: 12px;
   margin-right: 4px;
 }
 

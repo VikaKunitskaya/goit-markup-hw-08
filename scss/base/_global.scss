@@ -1,9 +1,14 @@
 body {
   font-family: $mainFont;
+  font-style: italic;
   font-size: 14px;
   line-height: 1.71;
   color: $primaryColor;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $tablet) {
+    font-style: normal;
+  }
 }
 
 h1,
@@ -31,19 +36,40 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1200px;
+  max-width: 480px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1200px;
+  }
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 
 .subtitle {
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  color: $primaryColor;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+  color: $primaryColor;
+
+  @media screen and (min-width: $tablet) {
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .hidden {

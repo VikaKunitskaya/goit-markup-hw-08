@@ -1,6 +1,7 @@
 //utils
 @import "./utils/vars";
-@import "../scss/utils/mixins";
+@import "./utils/mixins";
+@import "./utils/breakpoints";
 
 //base styles
 @import "./base/global";
@@ -14,9 +15,10 @@
 @import "./components/about";
 @import "./components/team";
 @import "./components/social";
-@import "./components/clients";
+@import "./components/customers";
 @import "./components/footer";
 @import "./components/footer-address";
+@import "./components/mobile-menu";
 @import "./components/portfolio-filter";
 @import "./components/portfolio-gallery";
 @import "./components/modal";

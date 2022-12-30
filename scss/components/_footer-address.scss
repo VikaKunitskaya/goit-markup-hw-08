@@ -1,9 +1,13 @@
 .address {
+  text-align: center;
   margin-top: 20px;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .address__link {
-  font-style: normal;
   color: $linkColor;
   text-decoration: none;
 

@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 40;
 
   width: 100vw;
   height: 100vh;
@@ -22,15 +23,23 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 95vw;
+  height: 95vh;
   background-color: $whiteColor;
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+
+  @media screen and (min-width: $tablet) {
+    width: 528px;
+    height: 581px;
+
+    max-width: 95vw;
+    max-height: 95vh;
+  }
 }
 
 .btn-close {

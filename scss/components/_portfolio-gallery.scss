@@ -1,20 +1,23 @@
 .gallery {
+  margin: -15px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .gallery__item {
-  margin-right: 30px;
-  margin-top: 30px;
-  flex-basis: calc((100% - 60px) / 3);
-
-  &:nth-child(3n) {
-    margin-right: 0;
+  margin: 15px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 .gallery__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: box-shadow $trDuration $trTimingFunction;
 
@@ -27,22 +30,19 @@
   &:hover .gallery__overlay,
   &:focus .gallery__overlay {
     transform: translateY(0);
-
-    opacity: 1;
   }
 }
 
 .gallery__wrapper {
   position: relative;
-
-  width: 370px;
-  height: 294px;
-
   overflow: hidden;
+
+  width: 100%;
 }
 
 .gallery__overlay {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
 
@@ -65,6 +65,7 @@
 }
 
 .card {
+  flex-grow: 1;
   padding: 20px 24px;
 
   border-right: 1px solid $galeryColor;
